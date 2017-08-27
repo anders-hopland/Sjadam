@@ -18,7 +18,7 @@ android {
         exclude 'META-INF/robovm/ios/robovm.xml'
     }
     defaultConfig {
-        applicationId "com.mygdx.game"
+        applicationId "com.mygdx.SjadamGame"
         minSdkVersion 9
         targetSdkVersion 25
     }
@@ -71,7 +71,7 @@ task run(type: Exec) {
     }
 
     def adb = path + "/platform-tools/adb"
-    commandLine "$adb", 'shell', 'am', 'start', '-n', 'com.mygdx.game/com.mygdx.game.AndroidLauncher'
+    commandLine "$adb", 'shell', 'am', 'start', '-n', 'com.mygdx.SjadamGame/AndroidLauncher'
 }
 
 // sets up the Android Eclipse project, using the old Ant based build.
