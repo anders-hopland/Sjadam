@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.mygdx.SjadamGame.SjadamGame;
 
 /**
  * Created by Anders-Hopland on 16.06.2017.
@@ -13,19 +14,14 @@ public class Bishop extends AbstractPiece {
 
     public Bishop(com.mygdx.SjadamGame.Helpers.BOARD_COLOR color) {
         super(color);
-        TextureRegion region;
-        Texture texture;
 
         if (color == com.mygdx.SjadamGame.Helpers.BOARD_COLOR.BLACK) {
-            texture = new Texture(Gdx.files.internal("chess.png"));
-            region = new TextureRegion(texture, 256, 0, 128, 128);
+            super.setTextureRegion(SjadamGame.assetManager.getBlackBishop());
         }
         else  {
-            texture = new Texture(Gdx.files.internal("chess.png"));
-            region = new TextureRegion(texture, 256, 128, 128, 128);
+            super.setTextureRegion(SjadamGame.assetManager.getWhiteBishop());
         }
 
-        super.setTextureRegion(region);
     }
 
     @Override

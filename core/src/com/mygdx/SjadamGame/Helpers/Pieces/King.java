@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.mygdx.SjadamGame.Helpers.BOARD_COLOR;
+import com.mygdx.SjadamGame.SjadamGame;
 
 /**
  * Created by Anders-Hopland on 14.06.2017.
@@ -15,19 +16,13 @@ public class King extends AbstractPiece {
 
     public King(BOARD_COLOR color) {
         super(color);
-        TextureRegion region;
-        Texture texture;
 
         if (color == BOARD_COLOR.BLACK) {
-            texture = new Texture(Gdx.files.internal("chess.png"));
-            region = new TextureRegion(texture, 640, 0, 128, 128);
+            super.setTextureRegion(SjadamGame.assetManager.getBlackKing());
         }
         else  {
-            texture = new Texture(Gdx.files.internal("chess.png"));
-            region = new TextureRegion(texture, 640, 128, 128, 128);
+            super.setTextureRegion(SjadamGame.assetManager.getWhiteKing());
         }
-
-        super.setTextureRegion(region);
     }
 
     @Override

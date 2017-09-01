@@ -10,27 +10,24 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
 public class AssetManager {
 
-    private static AssetManager instance = new AssetManager();
-    
     //white
-    private static TextureRegion whitePawn;
-    private static TextureRegion whiteKnight;
-    private static TextureRegion whiteBishop;
-    private static TextureRegion whiteRook;
-    private static TextureRegion whiteQueen;
-    private static TextureRegion whiteKing;
+    private  TextureRegion whitePawn;
+    private  TextureRegion whiteKnight;
+    private  TextureRegion whiteBishop;
+    private  TextureRegion whiteRook;
+    private  TextureRegion whiteQueen;
+    private  TextureRegion whiteKing;
     
     //black
-    private static TextureRegion blackPawn;
-    private static TextureRegion blackKnight;
-    private static TextureRegion blackBishop;
-    private static TextureRegion blackRook;
-    private static TextureRegion blackQueen;
-    private static TextureRegion blackKing;
+    private  TextureRegion blackPawn;
+    private  TextureRegion blackKnight;
+    private  TextureRegion blackBishop;
+    private  TextureRegion blackRook;
+    private  TextureRegion blackQueen;
+    private  TextureRegion blackKing;
+    private  Texture texture;
 
-    private Texture texture;
-    
-    private AssetManager() {
+    public AssetManager() {
         texture = new Texture(Gdx.files.internal("chessMinimized.png"));
 
         //white pawn
@@ -70,59 +67,51 @@ public class AssetManager {
         blackKing = new TextureRegion(texture, 320, 0, 64, 64);
     }
 
-    public static AssetManager getAssetManager() {
-        return instance;
-    }
-
-    public static AssetManager getInstance() {
-        return instance;
-    }
-
-    public static TextureRegion getWhitePawn() {
+    public TextureRegion getWhitePawn() {
         return whitePawn;
     }
 
-    public static TextureRegion getWhiteKnight() {
+    public  TextureRegion getWhiteKnight() {
         return whiteKnight;
     }
 
-    public static TextureRegion getWhiteBishop() {
+    public  TextureRegion getWhiteBishop() {
         return whiteBishop;
     }
 
-    public static TextureRegion getWhiteRook() {
+    public  TextureRegion getWhiteRook() {
         return whiteRook;
     }
 
-    public static TextureRegion getWhiteQueen() {
+    public  TextureRegion getWhiteQueen() {
         return whiteQueen;
     }
 
-    public static TextureRegion getWhiteKing() {
+    public  TextureRegion getWhiteKing() {
         return whiteKing;
     }
 
-    public static TextureRegion getBlackPawn() {
+    public  TextureRegion getBlackPawn() {
         return blackPawn;
     }
 
-    public static TextureRegion getBlackKnight() {
+    public  TextureRegion getBlackKnight() {
         return blackKnight;
     }
 
-    public static TextureRegion getBlackBishop() {
+    public  TextureRegion getBlackBishop() {
         return blackBishop;
     }
 
-    public static TextureRegion getBlackRook() {
+    public  TextureRegion getBlackRook() {
         return blackRook;
     }
 
-    public static TextureRegion getBlackQueen() {
+    public  TextureRegion getBlackQueen() {
         return blackQueen;
     }
 
-    public static TextureRegion getBlackKing() {
+    public  TextureRegion getBlackKing() {
         return blackKing;
     }
 }

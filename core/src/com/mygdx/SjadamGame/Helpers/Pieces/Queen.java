@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.mygdx.SjadamGame.Helpers.BOARD_COLOR;
+import com.mygdx.SjadamGame.SjadamGame;
 
 /**
  * Created by Anders-Hopland on 16.06.2017.
@@ -14,19 +15,13 @@ public class Queen extends AbstractPiece {
 
     public Queen(BOARD_COLOR color) {
         super(color);
-        TextureRegion region;
-        Texture texture;
 
         if (color == BOARD_COLOR.BLACK) {
-            texture = new Texture(Gdx.files.internal("chess.png"));
-            region = new TextureRegion(texture, 512, 0, 128, 128);
+            super.setTextureRegion(SjadamGame.assetManager.getBlackQueen());
         }
         else  {
-            texture = new Texture(Gdx.files.internal("chess.png"));
-            region = new TextureRegion(texture, 512, 128, 128, 128);
+            super.setTextureRegion(SjadamGame.assetManager.getWhiteQueen());
         }
-
-        super.setTextureRegion(region);
     }
 
     @Override
