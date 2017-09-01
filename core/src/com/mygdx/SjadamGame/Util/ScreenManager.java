@@ -50,7 +50,6 @@ public class ScreenManager {
         else if (game.getScreen() instanceof com.mygdx.SjadamGame.Screen.GameScreen) {
             pieces = ((com.mygdx.SjadamGame.Screen.GameScreen) game.getScreen()).getPieces();
             playingColor = ((com.mygdx.SjadamGame.Screen.GameScreen) game.getScreen()).getPlayingColor();
-
         }
 
         game.setScreen(newscreen);
