@@ -367,8 +367,6 @@ public class Board extends Actor implements IBoard {
                 shiftTurn();
             }
         }
-
-
     }
 
     private void clearBoard() {
@@ -483,16 +481,6 @@ public class Board extends Actor implements IBoard {
         }
     }
 
-    /**
-     * Resetting board and pieces to begin a new game
-     */
-    public void resetBoardAndPieces() {
-        setUpBoard();
-        playerTurn = BOARD_COLOR.WHITE;
-        activeClick = false;
-        playing = true;
-    }
-
     public BOARD_COLOR getPlayerTurn() {
         return playerTurn;
     }
@@ -523,7 +511,8 @@ public class Board extends Actor implements IBoard {
     }
 
     /**
-     * returns piecelist and resets current move to original position
+     * returns piecelist and resets current move to original position. Used to save game data
+     * while pausing
      */
     public com.mygdx.SjadamGame.Helpers.Pieces.IPiece[][] getPieceListAndResetPiece() {
         //to not reset the last move
@@ -532,6 +521,7 @@ public class Board extends Actor implements IBoard {
                 resetPiece();
             }
         }
+
         return pieceList;
     }
 }

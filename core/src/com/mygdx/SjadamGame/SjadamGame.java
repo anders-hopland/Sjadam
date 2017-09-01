@@ -22,7 +22,4 @@ public class SjadamGame extends Game {
 	}
 }
 
-//lag en singleton button maker
-//lag en side med hvordan man spiller
-//Kom opp noe når en person vinner
 
