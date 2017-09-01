@@ -1,3 +1,5 @@
+![sjadambild](https://user-images.githubusercontent.com/25608141/29970736-0191c5ae-8f26-11e7-9e1d-ab2bc6ce0539.png)
+
 # Sjadam
 The best game of all time, sjadam. 
 Different colored squares indicate what moves are available
