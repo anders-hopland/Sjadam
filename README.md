@@ -18,9 +18,3 @@ You may jump over as many of your own pieces as you like, but only over one oppo
 You may do a chess move whenever you feel like it.
 If any piece except the king makes it all the way to the opponents side, it evolves into a queen.
 
-#TODO-list
-
-Implement Sjadam AI
-Make it online multiplayer
-Save games
-Make the loading faster
